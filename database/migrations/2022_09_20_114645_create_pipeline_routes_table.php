@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('pipeline_routes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('pipeline_id')->constrained();
-            $table->decimal('lat', 3, 2);
-            $table->decimal('long', 3, 2);
+            $table->decimal('lat', 10, 2);
+            $table->decimal('long', 10, 2);
             $table->timestamps();
         });
     }

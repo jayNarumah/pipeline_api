@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Pipeline;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,9 @@ class PipelineRouteFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'pipeline_id' => Pipeline::inRandomOrder()->first(),
+            'lat' => rand(-180.0, 180.0),
+            'long' => rand(-90.0, 90.0),
         ];
     }
 }

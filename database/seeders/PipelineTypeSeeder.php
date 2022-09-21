@@ -14,6 +14,7 @@ class PipelineTypeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\PipelineType::factory(10)->create();
+
     }
 }
