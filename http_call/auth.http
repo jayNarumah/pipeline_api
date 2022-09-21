@@ -1,0 +1,147 @@
+GET http://127.0.0.1:8000/api/company HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+###
+POST http://127.0.0.1:8000/api/company HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+{
+    "name": 3,
+    "address": "Gusau",
+    "phone_number": "07066352444",
+    "email": "jay@demo.com"
+
+}
+####
+PUT http://127.0.0.1:8000/api/company/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+{
+     "name": 3,
+    "address": "Gusau",
+    "phone_number": "07066352440",
+    "email": "jay@demo.com"
+}
+###
+DELETE http://127.0.0.1:8000/api/company/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+###
+GET http://127.0.0.1:8000/api/company/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+###
+GET http://127.0.0.1:8000/api/pipeline HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+###
+POST http://127.0.0.1:8000/api/pipeline HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+{
+    "name": 3,
+    "pipeline_type_id": 1,
+    "company_id": 1,
+    "size": 1.4,
+    "start_lat": 180.0,
+    "start_long": -90.0,
+    "end_lat": -180.0,
+    "end_long": -90.0
+
+}
+####
+PUT http://127.0.0.1:8000/api/pipeline/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+{
+     "name": 3,
+    "pipeline_type_id": 1,
+    "company_id": 1,
+    "size": 1.4,
+    "start_lat": 180.0,
+    "start_long": -18.1,
+    "end_lat": 23.04,
+    "end_long": 23.0
+}
+###
+DELETE http://127.0.0.1:8000/api/pipeline/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+###
+GET http://127.0.0.1:8000/api/pipeline-route HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+###
+POST http://127.0.0.1:8000/api/pipeline-route HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+{
+    "pipeline_id": 1,
+    "lat": "1",
+    "long": "1"
+
+}
+####
+PUT http://127.0.0.1:8000/api/pipeline-route/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+{
+    "pipeline_id": 1,
+    "lat": "1",
+    "long": "1"
+}
+###
+DELETE http://127.0.0.1:8000/api/pipeline-route/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+GET http://127.0.0.1:8000/api/pipeline-type HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+###
+POST http://127.0.0.1:8000/api/pipeline-type HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+{
+    "name": 3
+
+}
+####
+PUT http://127.0.0.1:8000/api/pipeline-type/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+{
+     "name": "type"
+}
+###
+DELETE http://127.0.0.1:8000/api/pipeline-type/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+
+
