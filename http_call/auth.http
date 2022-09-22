@@ -53,10 +53,10 @@ Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
     "pipeline_type_id": 1,
     "company_id": 1,
     "size": 1.4,
-    "start_lat": 180.0,
-    "start_long": -90.0,
-    "end_lat": -180.0,
-    "end_long": -90.0
+    "start_lat": 90.0,
+    "start_long": -180.0,
+    "end_lat": -90.0,
+    "end_long": -180.0
 
 }
 ####
@@ -70,10 +70,10 @@ Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
     "pipeline_type_id": 1,
     "company_id": 1,
     "size": 1.4,
-    "start_lat": 180.0,
-    "start_long": -18.1,
-    "end_lat": 23.04,
-    "end_long": 23.0
+    "start_lat": 59.0,
+    "start_long": -150.0,
+    "end_lat": -59.0,
+    "end_long": -150.0
 }
 ###
 DELETE http://127.0.0.1:8000/api/pipeline/1 HTTP/1.1
@@ -105,8 +105,8 @@ Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
 
 {
     "pipeline_id": 1,
-    "lat": "1",
-    "long": "1"
+    "lat": "90.0",
+    "long": "180.0"
 }
 ###
 DELETE http://127.0.0.1:8000/api/pipeline-route/1 HTTP/1.1

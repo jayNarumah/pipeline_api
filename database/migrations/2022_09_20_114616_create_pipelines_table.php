@@ -19,10 +19,10 @@ return new class extends Migration
             $table->foreignId('company_id')->constrained();
             $table->string('name');
             $table->decimal('size', 10, 2);
-            $table->decimal('start_lat', 10, 2);
-            $table->decimal('start_long', 10, 2);
-            $table->decimal('end_lat', 10, 2);
-            $table->decimal('end_long', 10, 2);
+            $table->decimal('start_lat', 20, 10);
+            $table->decimal('start_long', 20, 10);
+            $table->decimal('end_lat', 20, 10);
+            $table->decimal('end_long', 20, 10);
 
             $table->timestamps();
         });

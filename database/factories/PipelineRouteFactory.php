@@ -19,8 +19,8 @@ class PipelineRouteFactory extends Factory
     {
         return [
             'pipeline_id' => Pipeline::inRandomOrder()->first(),
-            'lat' => rand(-180.0, 180.0),
-            'long' => rand(-90.0, 90.0),
+            'lat' => rand(-90.0, 90.0),
+            'long' => rand(-180.0, 180.0),
         ];
     }
 }

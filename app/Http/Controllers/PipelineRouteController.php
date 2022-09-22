@@ -29,9 +29,10 @@ class PipelineRouteController extends Controller
      */
     public function store(StorePipelineRouteRequest $request)
     {
-        if ($request->lat < -180
-        || $request->lat > 180
-        || $request->long < -90 || $request->long > 90 ) {
+        if ($request->lat < -90.0
+        || $request->lat > 90.0
+        || $request->long < -180.0
+        || $request->long > 180.0 ) {
             return response()->json('invalid number response', 403);
         }
         $route = PipelineRoute::create([

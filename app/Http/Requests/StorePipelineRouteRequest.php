@@ -25,8 +25,8 @@ class StorePipelineRouteRequest extends FormRequest
     {
         return [
             'pipeline_id' => 'required|unique:pipelines,id',
-            'lat' => 'required|between:-180,180',
-            'long' => 'required|between:-90,90',
+            'lat' => 'required|between:-90.0,90.0',
+            'long' => 'required|between:-180.0,180.0',
         ];
     }
 }

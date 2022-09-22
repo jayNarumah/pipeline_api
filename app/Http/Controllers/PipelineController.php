@@ -29,14 +29,14 @@ class PipelineController extends Controller
      */
     public function store(StorePipelineRequest $request)
     {
-        if ($request->start_lat < -180.0
-        || $request->start_lat > 180.0
-        || $request->end_lat < -180.0
-        || $request->end_lat > 180.0
-        || $request->start_long < -90.0
-        || $request->start_long > 90.0
-        || $request->end_long < -90.0
-        || $request->end_long > 90.0 ) {
+        if ($request->start_lat < -90.0
+        || $request->start_lat > 90.0
+        || $request->end_lat < -90.0
+        || $request->end_lat > 90.0
+        || $request->start_long < -180.0
+        || $request->start_long > 180.0
+        || $request->end_long < -180.0
+        || $request->end_long > 180.0 ) {
             return response()->json('invalid co-ordinate', 403);
         }
         $pipeline = Pipeline::create([
@@ -73,6 +73,17 @@ class PipelineController extends Controller
      */
     public function update(UpdatePipelineRequest $request, Pipeline $pipeline)
     {
+        if ($request->start_lat < -90.0
+        || $request->start_lat > 90.0
+        || $request->end_lat < -90.0
+        || $request->end_lat > 90.0
+        || $request->start_long < -180.0
+        || $request->start_long > 180.0
+        || $request->end_long < -180.0
+        || $request->end_long > 180.0 ) {
+            return response()->json('invalid co-ordinate', 403);
+        }
+
         $pipeline->pipeline_type_id = $request->pipe_line_type_id;
         $pipeline->company_id = $request->company_id;
         $pipeline->name = $request->name;
