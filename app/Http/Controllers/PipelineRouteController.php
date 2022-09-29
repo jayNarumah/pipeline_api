@@ -33,7 +33,8 @@ class PipelineRouteController extends Controller
         || $request->lat > 90.0
         || $request->long < -180.0
         || $request->long > 180.0 ) {
-            return response()->json('invalid number response', 403);
+            return response()->json([
+                'error'=> 'invalid number response'], 403);
         }
         $route = PipelineRoute::create([
             'pipeline_id' => $request->pipeline_id,

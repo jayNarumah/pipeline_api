@@ -81,7 +81,8 @@ class PipelineController extends Controller
         || $request->start_long > 180.0
         || $request->end_long < -180.0
         || $request->end_long > 180.0 ) {
-            return response()->json('invalid co-ordinate', 403);
+            return response()->json([
+                'error'=> 'invalid number response'], 403);
         }
 
         $pipeline->pipeline_type_id = $request->pipe_line_type_id;
