@@ -9,11 +9,10 @@ Accept: application/json
 Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
 
 {
-    "name": 3,
+    "name": "Abduljawad Ibrahim",
     "address": "Gusau",
     "phone_number": "07066352444",
     "email": "jay@demo.com"
-
 }
 ####
 PUT http://127.0.0.1:8000/api/company/1 HTTP/1.1
@@ -22,7 +21,7 @@ Accept: application/json
 Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
 
 {
-     "name": 3,
+     "name": "Abduljawad Ibrahim Narumah",
     "address": "Gusau",
     "phone_number": "07066352440",
     "email": "jay@demo.com"
@@ -49,7 +48,7 @@ Accept: application/json
 Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
 
 {
-    "name": 3,
+    "name": "Demo Pipeline",
     "pipeline_type_id": 1,
     "company_id": 1,
     "size": 1.4,
@@ -57,7 +56,6 @@ Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
     "start_long": -180.0,
     "end_lat": -90.0,
     "end_long": -180.0
-
 }
 ####
 PUT http://127.0.0.1:8000/api/pipeline/1 HTTP/1.1
@@ -66,7 +64,7 @@ Accept: application/json
 Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
 
 {
-     "name": 3,
+     "name": "Demo Pipeline Updated",
     "pipeline_type_id": 1,
     "company_id": 1,
     "size": 1.4,
@@ -95,7 +93,6 @@ Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
     "pipeline_id": 1,
     "lat": "1",
     "long": "1"
-
 }
 ####
 PUT http://127.0.0.1:8000/api/pipeline-route/1 HTTP/1.1
@@ -125,8 +122,7 @@ Accept: application/json
 Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
 
 {
-    "name": 3
-
+    "name": "Gas "
 }
 ####
 PUT http://127.0.0.1:8000/api/pipeline-type/1 HTTP/1.1
