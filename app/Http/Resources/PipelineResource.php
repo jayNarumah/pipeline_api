@@ -14,6 +14,16 @@ class PipelineResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+         return parent::toArray($request); //[
+        //     'id' => $this->id,
+        //     'name' => $this->name,
+        //     'size' => $this->size,
+        //     'start_lat' => $this->start_lat,
+        //     'start_long' => $this->start_long,
+        //     'end_lat' => $this->end_lat,
+        //     'end_long' => $this->end_long,
+        //     'pipeline_routes' => PipelineRouteCollection::make($this->whenLoaded('pipelineRoutes')),
+        //     // 'pipeline_type' => PipelineTypeCollection::make($this->whenLoaded('pipelineType')),
+        // ];
     }
 }

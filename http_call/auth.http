@@ -21,7 +21,7 @@ Accept: application/json
 Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
 
 {
-     "name": "Abduljawad Ibrahim Narumah",
+    "name": "Abduljawad Ibrahim Narumah",
     "address": "Gusau",
     "phone_number": "07066352440",
     "email": "jay@demo.com"
@@ -48,7 +48,7 @@ Accept: application/json
 Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
 
 {
-    "name": "Demo Pipeline",
+    "name": "Demo Pipeline Name",
     "pipeline_type_id": 1,
     "company_id": 1,
     "size": 1.4,
@@ -64,7 +64,7 @@ Accept: application/json
 Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
 
 {
-     "name": "Demo Pipeline Updated",
+     "name": "Demo Pipeline Updated Name",
     "pipeline_type_id": 1,
     "company_id": 1,
     "size": 1.4,

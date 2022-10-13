@@ -15,8 +15,8 @@ class PipelineRoute extends Model
     ];
     protected $casts = [
         'pipeline_id' => 'integer',
-        'lat' => 'decimal',
-        'long' => 'decimal',
+        // 'lat' => 'decimal',
+        // 'long' => 'decimal',
     ];
 
     /**
@@ -24,8 +24,8 @@ class PipelineRoute extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function pipeline(): BelongsTo
+    public function pipeline()//: BelongsTo
     {
-        return $this->belongsTo(pipeline::class);
+        return $this->belongsTo(pipeline::class, 'pipeline_id');
     }
 }
