@@ -102,7 +102,7 @@ class PipelineController extends Controller
                 'error'=> 'invalid number response'], 403);
         }
 
-        $pipeline->pipeline_type_id = $request->pipe_line_type_id;
+        $pipeline->pipeline_type_id = $request->pipeline_type_id;
         $pipeline->company_id = $request->company_id;
         $pipeline->name = $request->name;
         $pipeline->size = $request->size;
