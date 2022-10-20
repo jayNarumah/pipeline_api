@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pipeline;
+use App\Models\PipelineRoute;
+use Illuminate\Support\Facades\Log;
 use App\Http\Requests\StorePipelineRequest;
 use App\Http\Requests\UpdatePipelineRequest;
 use App\Http\Resources\PipelineResource;
@@ -16,7 +18,7 @@ class PipelineController extends Controller
      */
     public function index()
     {
-        $pipelines = PipeLine::all()->load('pipelineType', 'pipelineRoutes');
+        $pipelines = PipeLine::all()->load('pipelineType', 'pipelineRoutes', 'company');
 
         return new PipelineResource($pipelines, 200);
     }
@@ -39,6 +41,9 @@ class PipelineController extends Controller
         || $request->end_long > 180.0 ) {
             return response()->json('invalid co-ordinate', 403);
         }
+
+        $index = 0;
+
         $pipeline = Pipeline::create([
             'pipeline_type_id' => $request->pipeline_type_id,
             'company_id' => $request->company_id,
@@ -49,6 +54,18 @@ class PipelineController extends Controller
             'end_lat' => $request->end_lat,
             'end_long' =>$request->end_long,
         ]);
+
+        if ($request->lat && $request->long) {
+            foreach ($request->lat as $lat) {
+            $pipelineRoute = PipelineRoute::create([
+            'pipeline_id' => $pipeline->id,
+            'lat' => $request->lat[$index],
+            'long' => $request->long[$index],
+        ]);
+
+        ++ $index;
+        }
+        }
 
         return new PipelineResource($pipeline, 201);
     }
@@ -108,6 +125,6 @@ class PipelineController extends Controller
     {
         $pipeline->delete();
 
-        return new PipelineResource('Pipeline Record was successfully deleted', 200);
+        return response()->json('Pipeline Record was successfully deleted', 200);
     }
 }

@@ -79,6 +79,6 @@ class CompanyController extends Controller
     {
         $company->delete();
 
-        return new CompanyResource('Company was Successfully Deleted', 200);
+        return response()->json('Company was Successfully Deleted', 200);
     }
 }

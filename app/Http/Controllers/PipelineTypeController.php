@@ -69,5 +69,6 @@ class PipelineTypeController extends Controller
     public function destroy(PipelineType $pipelineType)
     {
         $pipelineType->delete();
+        return response()->json("Pipeline-Type was successfully deleted!!!", 200);
     }
 }
