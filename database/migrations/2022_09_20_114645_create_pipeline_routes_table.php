@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('pipeline_routes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('pipeline_id')->constrained();
+            $table->foreignId('pipeline_id')->constrained()->onDelete('cascade');
             $table->decimal('lat', 20, 10);
             $table->decimal('long', 20, 10);
             $table->timestamps();
