@@ -15,5 +15,13 @@ class PipelineRouteResource extends JsonResource
     public function toArray($request)
     {
         return parent::toArray($request);
+        // return [
+        //     'id' => this->id,
+        //     'lat' => this->lat,
+        //     'long' => this->long,
+        //     'pipeline_id' => this->pipeline_id,
+            // pipelines[
+            // ],
+        // ];
     }
 }

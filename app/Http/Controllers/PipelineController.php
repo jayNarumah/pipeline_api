@@ -67,7 +67,7 @@ class PipelineController extends Controller
         }
         }
 
-        return new PipelineResource($pipeline, 201);
+        return new PipelineResource($pipeline->load('company'), 201);
     }
 
     /**
