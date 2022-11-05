@@ -14,7 +14,7 @@ class PipelineRouteSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\PipelineRoute::factory(10)->create();
+        \App\Models\PipelineRoute::factory(5)->create();
 
     }
 }

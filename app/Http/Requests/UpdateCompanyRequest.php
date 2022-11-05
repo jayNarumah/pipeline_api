@@ -26,6 +26,7 @@ class UpdateCompanyRequest extends FormRequest
         return [
             'name' => 'required',
             'address' => 'required',
+            'color' => 'required',
             'phone_number' => 'required|min:11|max:13',
             'email' => 'required|email',
         ];

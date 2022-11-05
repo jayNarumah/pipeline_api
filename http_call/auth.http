@@ -3,6 +3,24 @@ Content-Type: application/json
 Accept: application/json
 Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
 ###
+GET http://127.0.0.1:8000/api/type-filter HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+{
+    "pipeline_type_id": 2
+}
+###
+GET http://127.0.0.1:8000/api/company-filter HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|sV26aV5egS88Fs4OZ2yHzpvPJSzqegJRoue5MS95
+
+{
+    "company_id": 2
+}
+###
 GET http://127.0.0.1:8000/api/pipeline-count HTTP/1.1
 Content-Type: application/json
 Accept: application/json

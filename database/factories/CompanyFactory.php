@@ -21,6 +21,7 @@ class CompanyFactory extends Factory
             'address' => $this->faker->address(),
             'phone_number' => rand(324345, 456789),
             'email' =>$this->faker->safeEmail(),
+            'color' => '#ff00ff',
         ];
     }
 }

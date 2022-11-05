@@ -33,6 +33,7 @@ class CompanyController extends Controller
         $company = Company::create([
             'name' => $request->name,
             'address' => $request->address,
+            'color' => $request->color,
             'phone_number' => $request->phone_number,
             'email' => $request->email,
         ]);

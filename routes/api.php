@@ -23,7 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/auth/login', [AuthController::class, 'login']);
 Route::get('/auth/logout', [AuthController::class, 'logout']);
 
-
 Route::apiResource('pipeline', App\Http\Controllers\PipelineController::class);
 Route::apiResource('pipeline-type', App\Http\Controllers\PipelineTypeController::class);
 Route::apiResource('pipeline-route', App\Http\Controllers\PipelineRouteController::class);
@@ -32,6 +31,9 @@ Route::apiResource('company', App\Http\Controllers\CompanyController::class);
 Route::get('/type-count', [StatisticController::class, 'pipelineTypeCount']);
 Route::get('/pipeline-count', [StatisticController::class, 'pipelineCount']);
 Route::get('/company-count', [StatisticController::class, 'companyCount']);
+
+Route::get('/company-filter', [App\Http\Controllers\PipelineController::class, 'filterByCompany']);
+Route::get('/type-filter', [App\Http\Controllers\PipelineController::class, 'filterByType']);
 
 Route::group(['middleware' => 'auth:sanctum',], function (){
 
