@@ -23,7 +23,7 @@ return new class extends Migration
             $table->decimal('start_long', 20, 10);
             $table->decimal('end_lat', 20, 10);
             $table->decimal('end_long', 20, 10);
-
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

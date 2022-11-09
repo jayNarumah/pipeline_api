@@ -38,6 +38,10 @@ class CompanyController extends Controller
             'email' => $request->email,
         ]);
 
+        if (!$company) {
+            return response()->json(['error' => 'Internal Server Error 500'], 500);
+        }
+
         return new CompanyResource($company, 201);
     }
 
@@ -78,7 +82,9 @@ class CompanyController extends Controller
      */
     public function destroy(Company $company)
     {
-        $company->delete();
+        // $company->delete();
+        $company->is_active = false;
+        $company->save();
 
         return response()->json('Company was Successfully Deleted', 200);
     }

@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            PipelineSeeder::class,
-            PipelineRouteSeeder::class,
+            // PipelineSeeder::class,
+            // PipelineRouteSeeder::class,
         ]);
     }
 }

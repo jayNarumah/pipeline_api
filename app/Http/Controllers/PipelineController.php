@@ -18,9 +18,10 @@ class PipelineController extends Controller
      */
     public function index()
     {
-        $pipelines = PipeLine::all()->load('pipelineType', 'pipelineRoutes', 'company');
+        $pipelines = Pipeline::where('is_active', true)->get();
+        // $pipelines = PipeLine::all()->load('pipelineType', 'pipelineRoutes', 'company');
 
-        return new PipelineResource($pipelines, 200);
+        return new PipelineResource($pipelines->load('pipelineType', 'pipelineRoutes', 'company'), 200);
     }
 
     /**
@@ -123,20 +124,22 @@ class PipelineController extends Controller
      */
     public function destroy(Pipeline $pipeline)
     {
-        $pipeline->delete();
+        // $pipeline->delete();
+        $pipeline->is_active = false;
+        $pipeline->save();
 
-        return response()->json('Pipeline Record was successfully deleted', 200);
+        return response()->json(['error' => 'Pipeline Record was successfully deleted'], 200);
     }
 
-    public function filterByType(){
-        $pipelines = Pipeline::where('pipeline_type_id', request()->pipeline_type_id)->get();
+    // public function filterByType(){
+    //     $pipelines = Pipeline::where('pipeline_type_id', request()->pipeline_type_id)->get();
 
-        return response()->json($pipelines->load('company', 'pipelineType'));
-    }
+    //     return response()->json($pipelines->load('company', 'pipelineType'));
+    // }
 
-    public function filterByCompany(){
-        $pipelines = Pipeline::where('company_id', request()->company_id)->get();
+    // public function filterByCompany(){
+    //     $pipelines = Pipeline::where('company_id', request()->company_id)->get();
 
-        return response()->json($pipelines->load('company', 'pipelineType'));
-    }
+    //     return response()->json($pipelines->load('company', 'pipelineType'));
+    // }
 }

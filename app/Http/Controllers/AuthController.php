@@ -25,7 +25,6 @@ class AuthController extends Controller
                 'role' => $user->userType->type,
             ], 200);
         }
-
         return response()->json(['error' => 'Can not login please try again!!'], 403);
 
         //return response()->json('Invalid Credentials!!!', 401);
@@ -38,4 +37,3 @@ class AuthController extends Controller
     }
 
 }
-
