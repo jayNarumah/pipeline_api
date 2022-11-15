@@ -28,7 +28,7 @@ class CompanySeeder extends Seeder
             'email' => '9mobile@info.net',
             'phone_number' => '08099999998',
             'address' => 'Apapa, Lagos Nigeria',
-            'color' => '#000ff9'
+            'color' => '#0007d0'
         ],
         [
             'name' => 'MTN',
