@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PipelineTypeSeeder extends Seeder
 {
@@ -14,7 +15,14 @@ class PipelineTypeSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\PipelineType::factory(5)->create();
+        DB::table('pipeline_types')->insert([
+            ['name' => 'Gas Pipeline'],
+            ['name' => 'Petrol Pipeline'],
+            ['name' => 'Kerosine Pipeline'],
+            ['name' => 'Chemical Products Pipe'],
+            ['name' => 'Fiber Optic Cable'],
+            ['name' => 'Water Pipe']
+        ]);
 
     }
 }
