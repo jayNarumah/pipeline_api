@@ -11,9 +11,10 @@ class AuthController extends Controller
     {
         $rules = $request->validate([
             'email' => 'required|string|email',
-            'password' => 'required|string|min:6'
+            'password' => 'required|string|min:4'
         ]);
 
+        Log::alert(bcrypt($request->password));
         if(auth()->attempt($rules))
         {
             $user = auth()->user();
@@ -22,7 +23,6 @@ class AuthController extends Controller
                 'user'=> $user,
                 'access_token' => $user -> createToken('access_token')->plainTextToken,
                 'token_type' => 'Bearer',
-                'role' => $user->userType->type,
             ], 200);
         }
         return response()->json(['error' => 'Can not login please try again!!'], 403);

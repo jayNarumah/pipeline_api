@@ -26,7 +26,7 @@ class StoreCompanyRequest extends FormRequest
         return [
             'name' => 'required',
             'address' => 'required',
-            'color' => 'required',
+            'color' => 'string',
             'phone_number' => 'required|min:11|max:13|unique:companies,phone_number',
             'email' => 'required|email|unique:companies,email',
         ];

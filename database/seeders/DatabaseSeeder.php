@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             // PipelineSeeder::class,
             // PipelineRouteSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }
