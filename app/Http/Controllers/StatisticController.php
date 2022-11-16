@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pipeline;
 use App\Models\Company;
-use App\Models\pipelineType;
+use App\Models\PipelineType;
 
 class StatisticController extends Controller
 {
