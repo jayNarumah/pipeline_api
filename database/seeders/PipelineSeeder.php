@@ -49,7 +49,7 @@ class PipelineSeeder extends Seeder
             [
                 'pipeline_type_id' => 4,
                 'company_id' => 6,
-                'name' => 'Affinity Chemical PIpe from Kano to Osun',
+                'name' => 'Affinity Chemical Pipe from Kano to Osun',
                 'size' => 3.20,
                 'start_lat' => 12.0000000000,
                 'start_long' => 8.5166670000,
@@ -58,7 +58,7 @@ class PipelineSeeder extends Seeder
             ],
             [
                 'pipeline_type_id' => 5,
-                'company_id' => 5,
+                'company_id' => 3,
                 'name' => 'MTN Pipe from Gusau to Lagos',
                 'size' => 3.22,
                 'start_lat' => 12.1702000000,
