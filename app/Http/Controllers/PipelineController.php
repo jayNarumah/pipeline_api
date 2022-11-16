@@ -130,16 +130,4 @@ class PipelineController extends Controller
 
         return response()->json(['error' => 'Pipeline Record was successfully deleted'], 200);
     }
-
-    // public function filterByType(){
-    //     $pipelines = Pipeline::where('pipeline_type_id', request()->pipeline_type_id)->get();
-
-    //     return response()->json($pipelines->load('company', 'pipelineType'));
-    // }
-
-    // public function filterByCompany(){
-    //     $pipelines = Pipeline::where('company_id', request()->company_id)->get();
-
-    //     return response()->json($pipelines->load('company', 'pipelineType'));
-    // }
 }

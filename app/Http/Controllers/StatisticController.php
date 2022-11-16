@@ -11,21 +11,21 @@ class StatisticController extends Controller
 {
     function pipelineCount()
     {
-        $count = Pipeline::all()->count();
+        $count = Pipeline::count();
 
         return response()->json($count, 200);
     }
 
     function pipelineTypeCount()
     {
-        $count = PipelineType::all()->count();
+        $count = PipelineType::count();
 
         return response()->json($count, 200);
     }
 
     function companyCount()
     {
-        $count = Company::all()->count();
+        $count = Company::count();
 
         return response()->json($count, 200);
     }

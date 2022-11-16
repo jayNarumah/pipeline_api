@@ -36,7 +36,7 @@ class Pipeline extends Model
      */
     public function company()//: BelongsTo
     {
-        return $this->belongsTo(Company::class, 'company_id', 'id');    
+        return $this->belongsTo(Company::class, 'company_id', 'id');
     }
 
     /**
@@ -46,7 +46,7 @@ class Pipeline extends Model
      */
     public function pipelineType()//: beLongsTo
     {
-        return $this->beLongsTo(pipelineType::class);
+        return $this->beLongsTo(PipelineType::class);
     }
 
     /**
